@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Comments from '@/components/Comments';
 import { User } from '@prisma/client';
+import { hydrateAuthStore } from '@/store/useAuthStore';
 
 interface Props {
   params: {
@@ -94,6 +95,7 @@ export const Listing: React.FC<Props> = ({ params }) => {
   };
 
   React.useEffect(() => {
+    hydrateAuthStore();
     getListing();
   }, []);
 
@@ -154,6 +156,11 @@ export const Listing: React.FC<Props> = ({ params }) => {
                           {error && (
                             <p className="text-black-400 font-medium mb-0 text-base">
                               ❌ Ставка слишком мала
+                            </p>
+                          )}
+                          {!isAuth && (
+                            <p className="text-black-400 font-medium mb-0 text-base">
+                              Для ставки авторизуйтесь
                             </p>
                           )}
                           <button
