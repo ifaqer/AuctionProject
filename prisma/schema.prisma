@@ -30,7 +30,6 @@ model Listing {
   bids        Bid[]
   comments    Comment[]
   isActive    Boolean
-  endTime     DateTime
   createdAt   DateTime  @default(now())
 }
 

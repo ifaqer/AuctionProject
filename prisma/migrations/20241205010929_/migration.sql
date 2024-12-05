@@ -17,7 +17,6 @@ CREATE TABLE "Listing" (
     "category" TEXT,
     "createdById" INTEGER NOT NULL,
     "isActive" BOOLEAN NOT NULL,
-    "endTime" DATETIME NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT "Listing_createdById_fkey" FOREIGN KEY ("createdById") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );

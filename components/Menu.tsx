@@ -43,7 +43,7 @@ const Menu: React.FC<Props> = ({ setCategory, setValueCategory, className }) => 
           'text-lg text-gray-600 hover:text-gray-800 cursor-pointer',
           !isAuth ? 'hidden' : '',
         )}>
-        <Link href="/createList">Создать</Link>
+        <Link href="/create">Создать</Link>
       </li>
       <li
         className={cn(

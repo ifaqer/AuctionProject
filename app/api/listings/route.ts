@@ -29,7 +29,6 @@ export async function GET() {
           text: true,
         },
       },
-      endTime: true,
       createdBy: true,
     },
   });
