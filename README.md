@@ -15,7 +15,7 @@
 - Server-side rendering (SSR)
 - API Routes
 - Модульная архитектура
-- 
+
 <img src="1.png">
 <img src="2.png">
 <img src="5.png">
